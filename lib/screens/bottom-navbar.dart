@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jawad_project/screens/home/view.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+import 'package:jawad_project/screens/search/view.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);
@@ -13,8 +14,8 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   late final PageController controller;
-  int currentIndex = 0;
-  List<IconData> iconList = [ //list of icons that required by animated navigation bar.
+  List<IconData> iconList = [
+    //list of icons that required by animated navigation bar.
     Icons.home_outlined,
     Icons.search,
     Icons.favorite_border,
@@ -24,27 +25,22 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    controller = PageController(initialPage: currentIndex);
+    controller = PageController(initialPage: _bottomNavIndex);
   }
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
       body: PageView(
-        children: [
-          HomePage(),
-          Container(),
-          Container(),
-          Container()
-        ],
+        controller: controller,
+        children: [HomePage(), SearchPage(), Container(), Container()],
       ), //destination screen
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.white70,
-        onPressed: (){},
+
+        onPressed: () {},
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Image.asset('assets/images/pen.png'),
@@ -63,9 +59,12 @@ class _BottomNavBarState extends State<BottomNavBar> {
         notchSmoothness: NotchSmoothness.defaultEdge,
         leftCornerRadius: 32,
         rightCornerRadius: 32,
-        onTap: (index) => setState(() => _bottomNavIndex = index),
+        onTap: (index) {
+          setState(() => _bottomNavIndex = index);
+          controller.jumpToPage(index);
+        },
         //other params
       ),
-    );;
+    );
   }
 }

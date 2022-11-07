@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jawad_project/screens/bottom-navbar.dart';
@@ -14,15 +16,19 @@ class Search_filterPage extends StatelessWidget {
       bottomNavigationBar: SizedBox(
         height: MediaQuery.of(context).size.height * 0.1,
         child: InkWell(
-          onTap: (){
-            Get.to(()=> BottomNavBar());
+          onTap: () {
+            Get.to(() => BottomNavBar());
           },
           child: Row(
             children: [
               Spacer(),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Icon(Icons.arrow_forward,size: 40,color: Colors.white,),
+                child: Icon(
+                  Icons.arrow_forward,
+                  size: 40,
+                  color: Colors.white,
+                ),
               )
             ],
           ),
@@ -42,106 +48,230 @@ class Search_filterPage extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                   color: Colors.white.withOpacity(0.2),
-                  borderRadius: BorderRadius.only(
-                      bottomRight: Radius.circular(30),
-                      bottomLeft: Radius.circular(30))),
+                  borderRadius: BorderRadius.only(bottomRight: Radius.circular(30), bottomLeft: Radius.circular(30))),
               width: double.infinity,
-              height: MediaQuery.of(context).size.height * 0.1,
+              height: MediaQuery.of(context).size.height * 0.13,
               child: Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      'Search',
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Text(
+                    'Search',
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 24,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Wrap(
+                spacing: 10,
+                runSpacing: 11,
+                children: [
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white),
                     ),
-                  )),
+                    child: Text(
+                      'Self-love',
+                      style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Text(
+                      'Fitness',
+                      style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Text(
+                      'Business',
+                      style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Text(
+                      'Wisdom',
+                      style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Text(
+                      'Confidence',
+                      style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Text(
+                      'Best',
+                      style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Text(
+                      'Simplicity',
+                      style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Text(
+                      'Productivity',
+                      style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Text(
+                      'Sales',
+                      style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Text(
+                      'Growth',
+                      style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Text(
+                      'Be Authentic',
+                      style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Text(
+                      'Stop Procrastination',
+                      style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Text(
+                      'Love',
+                      style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Text(
+                      'Be a Hero',
+                      style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Text(
+                      'Better Relationships',
+                      style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Text(
+                      'Take Action',
+                      style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Text(
+                      'More Creative',
+                      style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Text(
+                      'More Progress',
+                      style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ],
+              ),
             ),
-            GridView(
-              physics: NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              crossAxisSpacing: 20.0,
-              mainAxisSpacing: 10.0,
-                childAspectRatio: 4,
-            ),
-            padding: EdgeInsets.all(12),
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.white),
-                ),
-                child: Center(child: Text('Self-love',style: TextStyle(color: Colors.white),)),),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.white),
-                ),
-                child: Center(child: Text('Fitness',style: TextStyle(color: Colors.white),)),),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.white),
-                ),
-                child: Center(child: Text('Brightness',style: TextStyle(color: Colors.white),)),),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.white),
-                ),
-                child: Center(child: Text('Wisdom',style: TextStyle(color: Colors.white),)),),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.white),
-                ),
-                child: Center(child: Text('Confidence',style: TextStyle(color: Colors.white),)),),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.white),
-                ),
-                child: Center(child: Text('Best',style: TextStyle(color: Colors.white),)),),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.white),
-                ),
-                child: Center(child: Text('Simplicity',style: TextStyle(color: Colors.white),)),),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.white),
-                ),
-                child: Center(child: Text('Sales',style: TextStyle(color: Colors.white),)),),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.white),
-                ),
-                child: Center(child: Text('Growth',style: TextStyle(color: Colors.white),)),),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.white),
-                ),
-                child: Center(child: Text('Be Authentic',style: TextStyle(color: Colors.white),)),),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.white),
-                ),
-                child: Center(child: Text('Love',style: TextStyle(color: Colors.white),)),),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.white),
-                ),
-                child: Center(child: Text('Be a hero',style: TextStyle(color: Colors.white),)),),
-            ],
-            )
           ],
         ),
       ),
